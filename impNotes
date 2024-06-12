@@ -1,0 +1,15 @@
+Netflix Ribbon Overview
+Purpose: Netflix Ribbon provided client-side load balancing, fault tolerance, and resiliency for HTTP and TCP-based services.
+
+Key Features:
+
+Load Balancing: Distributed load balancing across multiple service instances.
+Client-Side Load Balancer: Integrated with Eureka (Service Discovery) for dynamic server list updates.
+Fault Tolerance: Automatic retry and failover handling for HTTP requests.
+Customization: Configuration options for retry policies, load balancing algorithms, etc.
+Integration with Spring Cloud:
+
+Ribbon was commonly used with Spring Cloud’s @LoadBalanced annotation to enable load balancing for RestTemplate and WebClient instances.
+It worked seamlessly with Netflix Eureka for service discovery and dynamic server list updates.
+
+Kubernetes : it has load balancer : we have to remove our ribbon based impl from our app code.
