@@ -1,0 +1,69 @@
+Common Actuator Endpoints
+/actuator: Lists all available actuator endpoints.
+
+Method: GET
+Example: curl http://localhost:8080/actuator
+/actuator/health: Shows the application health information.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/health
+/actuator/info: Displays arbitrary application info.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/info
+/actuator/env: Exposes properties from Spring’s ConfigurableEnvironment.
+
+Method: GET, POST
+Example: curl http://localhost:8080/actuator/env
+/actuator/metrics: Shows 'metrics' information for the current application.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/metrics
+/actuator/metrics/{metric.name}: Shows specific metrics by name.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/metrics/jvm.memory.used
+/actuator/beans: Displays a complete list of all Spring beans in your application.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/beans
+/actuator/loggers: Shows and modifies the configuration of loggers in the application.
+
+Method: GET, POST
+Example: curl http://localhost:8080/actuator/loggers
+/actuator/threaddump: Performs a thread dump.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/threaddump
+/actuator/httptrace: Displays HTTP trace information.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/httptrace
+/actuator/mappings: Displays a list of all @RequestMapping paths.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/mappings
+/actuator/conditions: Shows the conditions that were evaluated on configuration and auto-configuration classes.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/conditions
+/actuator/configprops: Displays a collated list of all @ConfigurationProperties.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/configprops
+/actuator/shutdown: Allows the application to be gracefully shut down (requires enabling).
+
+Method: POST
+Example: curl -X POST http://localhost:8080/actuator/shutdown
+/actuator/caches: Provides a view of the caches and allows them to be cleared.
+
+Method: GET, DELETE
+Example: curl http://localhost:8080/actuator/caches
+/actuator/auditevents: Shows audit events for the current application.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/auditevents
+/actuator/scheduledtasks: Displays the scheduled tasks in your application.
+
+Method: GET
+Example: curl http://localhost:8080/actuator/scheduledtasks
