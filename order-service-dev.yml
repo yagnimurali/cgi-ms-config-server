@@ -22,5 +22,5 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh,health,info
-        # include: "*"
+        # include: refresh,health,info
+        include: "*"
